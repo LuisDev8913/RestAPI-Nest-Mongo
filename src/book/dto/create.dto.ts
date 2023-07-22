@@ -1,7 +1,7 @@
 import { IsNotEmpty, IsString, IsNumber, IsEnum } from 'class-validator';
-import { Category } from '../book.schema';
+import { Category } from '../schema/book.schema';
 
-export class UpdateBookDto {
+export class CreateBookDto {
   @IsNotEmpty()
   @IsString()
   readonly title: string;

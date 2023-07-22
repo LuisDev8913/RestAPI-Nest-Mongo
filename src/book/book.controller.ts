@@ -10,8 +10,8 @@ import {
 } from '@nestjs/common';
 import { BookService } from './book.service';
 import { Book } from './schema/book.schema';
-import { CreateBookDto } from './schema/dto/create.dto';
-import { UpdateBookDto } from './schema/dto/update.dto';
+import { CreateBookDto } from './dto/create.dto';
+import { UpdateBookDto } from './dto/update.dto';
 import { Query as ExpressQuery } from 'express-serve-static-core';
 
 @Controller('books')
