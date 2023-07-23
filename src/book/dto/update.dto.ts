@@ -1,5 +1,12 @@
-import { IsNotEmpty, IsString, IsNumber, IsEnum } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsString,
+  IsNumber,
+  IsEnum,
+  IsEmpty,
+} from 'class-validator';
 import { Category } from '../schema/book.schema';
+import { User } from '../../auth/schema/user.schema';
 
 export class UpdateBookDto {
   @IsNotEmpty()
@@ -21,4 +28,7 @@ export class UpdateBookDto {
   @IsNotEmpty()
   @IsEnum(Category, { message: 'Please enter correct category' })
   readonly category: Category;
+
+  @IsEmpty({ message: 'You cannot pass user id' })
+  readonly user: User;
 }
